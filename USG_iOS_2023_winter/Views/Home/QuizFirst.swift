@@ -46,7 +46,7 @@ struct QuizFirst: View {
                     .padding()
                     .overlay(
                         HStack {
-                            Text("귀가")
+                            Text("귀가 ")
                             
                             Button {
                                 selectAnswerViewModel.selectAnswerButtonTapped()

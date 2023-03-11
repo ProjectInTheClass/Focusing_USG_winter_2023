@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     @StateObject var viewModel = HomeViewModel()
+    @State var selectedProfile = 0
     let customWidth = 0.4
     let cutomHeight = 0.09
     
@@ -20,11 +21,11 @@ struct HomeView: View {
                     VStack {
                         Spacer()
                         
-                        Image("bear 1")
+                        Image(profiles[selectedProfile].imageName)
                             .resizable()
                             .frame(width:geometry.size.width / 2, height: geometry.size.height / 7)
                         //.frame(width:122, height: 122)
-                        Text("김수달")
+                        Text(profiles[selectedProfile].name)
                             .font(.system(size: geometry.size.width * 0.075))
                             .bold()
                         //.padding(.top, 3)
@@ -36,7 +37,7 @@ struct HomeView: View {
                             Image("Group 3")
                                 //.resizable()
                         }.sheet(isPresented: $viewModel.isProfileDisplayed) {
-                            ProfileView()
+                            ProfileView(selectedProfile: $selectedProfile)
                         }
                         
                         //.padding(.top, 6)
