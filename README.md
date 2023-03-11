@@ -1,4 +1,4 @@
-#Focucing팀
+# Focucing팀
 ---
 
 <figure>
