@@ -47,10 +47,7 @@ struct QuizFirst: View {
                     .overlay(
                         HStack {
                             Text("귀가 ")
-<<<<<<< HEAD
                                 .font(.custom("HelveticaNeue", size: 24))
-=======
->>>>>>> origin/main
                             
                             Button {
                                 selectAnswerViewModel.selectAnswerButtonTapped()
@@ -60,14 +57,10 @@ struct QuizFirst: View {
                                     .frame(width:geometry.size.width * 0.2, height: geometry.size.height * 0.1)
                                 //.resizable()
                             }.sheet(isPresented: $selectAnswerViewModel.isSelectAnswerDisplayed) {
-<<<<<<< HEAD
                                 NavigationStack{
                                     SelectAnswerView(selectAnswerViewModel: selectAnswerViewModel)
                                 }
                                 
-=======
-                                SelectAnswerView(selectAnswerViewModel: selectAnswerViewModel)
->>>>>>> origin/main
                             }
                         }
                     )
