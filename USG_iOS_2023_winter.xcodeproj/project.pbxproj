@@ -78,6 +78,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A18B186329C4BC050031161A /* SubView */ = {
+			isa = PBXGroup;
+			children = (
+				A14FADA129BC3D0F00BAE947 /* DrawingHintView.swift */,
+				A14FADA329BC3D2000BAE947 /* QuizHintView.swift */,
+				A14FADA529BC3D3200BAE947 /* NavigationBarView.swift */,
+				A14FADA729BC3D4200BAE947 /* NavigationBarLeadingView.swift */,
+			);
+			path = SubView;
+			sourceTree = "<group>";
+		};
 		BFF99A7E29A950F0004BACA6 = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				BFF99AA129A955E1004BACA6 /* Home */,
+				A18B186329C4BC050031161A /* SubView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -158,10 +170,6 @@
 				BFF99AB229A9D091004BACA6 /* Constants.swift */,
 				BFD0C58629B3293E009DB478 /* SelectAnswer.swift */,
 				4EE6BD2929BA29F7004D3B10 /* Profile.swift */,
-				A14FADA129BC3D0F00BAE947 /* DrawingHintView.swift */,
-				A14FADA329BC3D2000BAE947 /* QuizHintView.swift */,
-				A14FADA529BC3D3200BAE947 /* NavigationBarView.swift */,
-				A14FADA729BC3D4200BAE947 /* NavigationBarLeadingView.swift */,
 				4E4EBBFC29BC35A6002253D6 /* database.xcdatamodeld */,
 			);
 			path = Models;
