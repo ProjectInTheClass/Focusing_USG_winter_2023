@@ -14,7 +14,10 @@
 		A14FADA429BC3D2000BAE947 /* QuizHintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14FADA329BC3D2000BAE947 /* QuizHintView.swift */; };
 		A14FADA629BC3D3200BAE947 /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14FADA529BC3D3200BAE947 /* NavigationBarView.swift */; };
 		A14FADA829BC3D4200BAE947 /* NavigationBarLeadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14FADA729BC3D4200BAE947 /* NavigationBarLeadingView.swift */; };
-		BFD0C57F29B306D7009DB478 /* QuizFirst.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0C57E29B306D7009DB478 /* QuizFirst.swift */; };
+		A1C3C8AA2A544BFA00E098C0 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C3C8A92A544BFA00E098C0 /* QuizView.swift */; };
+		A1C3C8AC2A544C0A00E098C0 /* QuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C3C8AB2A544C0A00E098C0 /* QuizViewModel.swift */; };
+		A1C3C8AE2A544C2100E098C0 /* QuizModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C3C8AD2A544C2100E098C0 /* QuizModel.swift */; };
+		A1C3C8B12A5468D200E098C0 /* QuizData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C3C8B02A5468D200E098C0 /* QuizData.swift */; };
 		BFD0C58329B3259A009DB478 /* SelectAnswerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0C58229B3259A009DB478 /* SelectAnswerView.swift */; };
 		BFD0C58529B3288B009DB478 /* SelectAnswerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0C58429B3288B009DB478 /* SelectAnswerViewModel.swift */; };
 		BFD0C58729B3293E009DB478 /* SelectAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD0C58629B3293E009DB478 /* SelectAnswer.swift */; };
@@ -44,7 +47,10 @@
 		A14FADA329BC3D2000BAE947 /* QuizHintView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizHintView.swift; sourceTree = "<group>"; };
 		A14FADA529BC3D3200BAE947 /* NavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
 		A14FADA729BC3D4200BAE947 /* NavigationBarLeadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarLeadingView.swift; sourceTree = "<group>"; };
-		BFD0C57E29B306D7009DB478 /* QuizFirst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizFirst.swift; sourceTree = "<group>"; };
+		A1C3C8A92A544BFA00E098C0 /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
+		A1C3C8AB2A544C0A00E098C0 /* QuizViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewModel.swift; sourceTree = "<group>"; };
+		A1C3C8AD2A544C2100E098C0 /* QuizModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizModel.swift; sourceTree = "<group>"; };
+		A1C3C8B02A5468D200E098C0 /* QuizData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizData.swift; sourceTree = "<group>"; };
 		BFD0C58229B3259A009DB478 /* SelectAnswerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAnswerView.swift; sourceTree = "<group>"; };
 		BFD0C58429B3288B009DB478 /* SelectAnswerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAnswerViewModel.swift; sourceTree = "<group>"; };
 		BFD0C58629B3293E009DB478 /* SelectAnswer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAnswer.swift; sourceTree = "<group>"; };
@@ -89,6 +95,14 @@
 			path = SubView;
 			sourceTree = "<group>";
 		};
+		A1C3C8AF2A5468C300E098C0 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				A1C3C8B02A5468D200E098C0 /* QuizData.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		BFF99A7E29A950F0004BACA6 = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				BFF99A8A29A950F0004BACA6 /* USG_iOS_2023_winter.swift */,
+				A1C3C8AF2A5468C300E098C0 /* Data */,
 				BFF99A9C29A954C6004BACA6 /* Models */,
 				BFF99A9B29A954C4004BACA6 /* Views */,
 				BFF99A9A29A954C1004BACA6 /* ViewModels */,
@@ -149,6 +164,7 @@
 				BFF99AA429A95644004BACA6 /* HomeViewModel.swift */,
 				BFF99ABA29A9DE84004BACA6 /* CardNavigationViewModel.swift */,
 				BFD0C58429B3288B009DB478 /* SelectAnswerViewModel.swift */,
+				A1C3C8AB2A544C0A00E098C0 /* QuizViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -170,6 +186,7 @@
 				BFF99AB229A9D091004BACA6 /* Constants.swift */,
 				BFD0C58629B3293E009DB478 /* SelectAnswer.swift */,
 				4EE6BD2929BA29F7004D3B10 /* Profile.swift */,
+				A1C3C8AD2A544C2100E098C0 /* QuizModel.swift */,
 				4E4EBBFC29BC35A6002253D6 /* database.xcdatamodeld */,
 			);
 			path = Models;
@@ -186,7 +203,7 @@
 				BFF99AAC29A96308004BACA6 /* RewardView.swift */,
 				BFF99AAE29A9D091004BACA6 /* ColorPickerView.swift */,
 				BFF99AB029A9D091004BACA6 /* ContentView.swift */,
-				BFD0C57E29B306D7009DB478 /* QuizFirst.swift */,
+				A1C3C8A92A544BFA00E098C0 /* QuizView.swift */,
 				BFD0C58229B3259A009DB478 /* SelectAnswerView.swift */,
 			);
 			path = Home;
@@ -265,6 +282,7 @@
 				BFF99ABD29A9DFD6004BACA6 /* CardQuiz.swift in Sources */,
 				BFF99AA729A9593B004BACA6 /* CardView.swift in Sources */,
 				A14FADA629BC3D3200BAE947 /* NavigationBarView.swift in Sources */,
+				A1C3C8AC2A544C0A00E098C0 /* QuizViewModel.swift in Sources */,
 				BFF99AB729A9D091004BACA6 /* Constants.swift in Sources */,
 				BFF99ABF29A9E1C3004BACA6 /* CardQuizView.swift in Sources */,
 				BFF99AA529A95644004BACA6 /* HomeViewModel.swift in Sources */,
@@ -273,17 +291,19 @@
 				BFF99AAD29A96308004BACA6 /* RewardView.swift in Sources */,
 				A14FADA429BC3D2000BAE947 /* QuizHintView.swift in Sources */,
 				A14FAD9C29BC3A9500BAE947 /* CanvasView.swift in Sources */,
+				A1C3C8AE2A544C2100E098C0 /* QuizModel.swift in Sources */,
 				BFF99A9E29A95538004BACA6 /* Color+Extension.swift in Sources */,
 				BFD0C58529B3288B009DB478 /* SelectAnswerViewModel.swift in Sources */,
 				BFF99ABB29A9DE84004BACA6 /* CardNavigationViewModel.swift in Sources */,
 				A14FADA229BC3D0F00BAE947 /* DrawingHintView.swift in Sources */,
-				BFD0C57F29B306D7009DB478 /* QuizFirst.swift in Sources */,
 				BFF99AB329A9D091004BACA6 /* ColorPickerView.swift in Sources */,
+				A1C3C8AA2A544BFA00E098C0 /* QuizView.swift in Sources */,
 				BFF99AB529A9D091004BACA6 /* ContentView.swift in Sources */,
 				BFD0C58329B3259A009DB478 /* SelectAnswerView.swift in Sources */,
 				BFF99AA329A955F9004BACA6 /* HomeView.swift in Sources */,
 				4EE6BD2A29BA29F7004D3B10 /* Profile.swift in Sources */,
 				BFF99AA929A95A25004BACA6 /* ProfileView.swift in Sources */,
+				A1C3C8B12A5468D200E098C0 /* QuizData.swift in Sources */,
 				A14FADA829BC3D4200BAE947 /* NavigationBarLeadingView.swift in Sources */,
 				4E4EBBFE29BC35A6002253D6 /* database.xcdatamodeld in Sources */,
 				BFF99A8B29A950F0004BACA6 /* USG_iOS_2023_winter.swift in Sources */,
