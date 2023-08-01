@@ -12,7 +12,6 @@ struct QuizModel{
     let quizTopicImage:String
     let quizFirst:[String]
     let quizSecond:[String]
-    let quizAnswer:[String]
-    var isNextQuiz:Bool
-    
+    let quizAnswer:AnswerModel
 }
+

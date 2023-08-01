@@ -15,7 +15,7 @@ struct CardQuizView: View {
         
         // Quiz 시작
         NavigationLink {
-            QuizView(model: QuizData.quizs[0])
+            //QuizView(model: QuizData.Quizs["토"])
         } label: {
             ZStack {
                 

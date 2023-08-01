@@ -16,6 +16,7 @@ struct QuizView: View {
     }
     
     
+    
     var body: some View {
         GeometryReader { geometry in
             VStack{
@@ -48,7 +49,7 @@ struct QuizView: View {
                                 .font(.custom("HelveticaNeue", size: 24))
                             
                             Button {
-                                // 문제 풀이 화면
+                                viewModel.selectAnswer()
                             } label: {
                                 RoundedRectangle(cornerRadius: 15)
                                     .fill(.green)
@@ -59,15 +60,32 @@ struct QuizView: View {
                                 .font(.custom("HelveticaNeue", size: 24))
                         }
                     )
-                
-            }//:VStack
+                    .sheet(isPresented: $viewModel.isShowAnswer) {
+                        AnswerView(model: viewModel.model)
+                        //시트 크기 조절?
+                    }
+                Button {
+                    // answerView에서 답을 선택시 프로퍼티 받아서 활성화 되게끔
+                } label: {
+                    ZStack{
+                        RoundedRectangle(cornerRadius: 15)
+                            .frame(width: geometry.size.width * 0.8, height:geometry.size.height * 0.13)
+                            .foregroundColor(.gray)
+                        Text("다음")
+                            .foregroundColor(.white)
+                    }
+                    
+                    
+                }
+
+            }
             .frame(width: geometry.size.width, height: geometry.size.height, alignment: .center)
         }
     }
     
     struct QuizView_Previews: PreviewProvider {
         static var previews: some View {
-            QuizView(model: QuizData.quizs[0])
+            QuizView(model: QuizData.Quizs["토끼"] ?? QuizModel(quizTopic: "", quizTopicImage: "", quizFirst: [], quizSecond: [], quizAnswer:AnswerModel(answer: [], dummyAnswer: [[]])))
         }
     }
 }

@@ -6,13 +6,26 @@
 //
 
 import Foundation
+import SwiftUI
 
 class QuizViewModel: ObservableObject {
-    let model: QuizModel
+    var model: QuizModel
+    @Published var isShowAnswer:Bool
+    @Published var selectedAnswer:String
     
     init(model: QuizModel) {
         self.model = model
+        self.isShowAnswer = false
+        self.selectedAnswer = ""
     }
     
     
+    func selectAnswer(){
+        isShowAnswer.toggle()
+    }
+    
+    func selectAnswer(num: Int){
+        selectedAnswer = model.quizAnswer.answer[num]
+    }
 }
+
