@@ -19,7 +19,6 @@ class QuizViewModel: ObservableObject {
         self.selectedAnswer = ""
     }
     
-    
     func selectAnswer(){
         isShowAnswer.toggle()
     }
