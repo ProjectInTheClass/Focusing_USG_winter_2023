@@ -25,7 +25,7 @@ class QuizViewModel: ObservableObject {
     }
     
     func selectAnswer(num: Int){
-        selectedAnswer = model.quizAnswer.answer[num]
+        selectedAnswer = model.quizAnswer.dummyAnswer[0][num]
     }
 }
 
