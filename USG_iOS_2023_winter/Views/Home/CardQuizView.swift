@@ -15,7 +15,7 @@ struct CardQuizView: View {
         
         // Quiz 시작
         NavigationLink {
-            //QuizView(model: QuizData.Quizs["토"])
+            QuizView(model: QuizData.Quizs[subTopic] ?? QuizData.rabbitQuiz)
         } label: {
             ZStack {
                 
@@ -36,26 +36,9 @@ struct CardQuizView: View {
                     .frame(width: 200, height: 150, alignment: .bottomTrailing)
                     .padding(.bottom, 25)
                     .padding(.trailing, 20)
-                
-                //.padding(.trailing, 10)
-                
-            } //: ZStack
-        } //: NavigationLink
-        //.navigationBarTitle(subTopic)
-
-        
-//        .navigationBarItems(leading:
-//            Button(action: {
-//
-//        }) //:action
-//        {
-//            HStack {
-//                Image(systemName:"chevron.left")
-//                Text("wow")
-//             } //:HStack
-//            } //: Button
-//        ) //:navigationBarItems
-        
+      
+            }
+        }
 
             
     }

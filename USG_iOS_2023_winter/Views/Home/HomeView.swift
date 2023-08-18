@@ -167,6 +167,7 @@ struct HomeView: View {
                                 
                                 ForEach(viewModel.cardList, id:\.self) { card in
                                     CardView(card: card)
+                                   // QuizView(model: QuizData.Quizs[card]) 
                                 } //: Loop
                             } //: LazyVStack
                             
