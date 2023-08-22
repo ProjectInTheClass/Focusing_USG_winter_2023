@@ -45,6 +45,8 @@ class QuizViewModel: ObservableObject {
         disabledButton = true
     }
     
+
+    
     func answerCheck(test:[String], answer:[String]) -> Int {
         self.collectAnswer = 0
         for element in test{

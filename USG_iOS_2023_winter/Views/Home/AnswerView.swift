@@ -43,10 +43,7 @@ struct AnswerView:View {
                             Text("\(viewModel.model.quizAnswer.dummyAnswer[viewModel.index][num])")
 
                         }
-                        
-                        
                     }
-                    
                 }
             }
                 Button {
