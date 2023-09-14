@@ -18,6 +18,8 @@ class QuizViewModel: ObservableObject {
     @Published var collectAnswer:Int = 0
     @Published var isCollectAnswer:[Bool] = []
     @Published var isShowRewardView:Bool = false
+    @Published var isLinkActive:Bool = false
+    @Published var index_answerCheckView:Int = 0
     
     init(model: QuizModel) {
         self.model = model
@@ -45,8 +47,6 @@ class QuizViewModel: ObservableObject {
         disabledButton = true
     }
     
-
-    
     func answerCheck(test:[String], answer:[String]) -> Int {
         self.collectAnswer = 0
         for element in test{
@@ -68,6 +68,10 @@ class QuizViewModel: ObservableObject {
         }else{
             self.testArray.insert("\(self.model.quizAnswer.dummyAnswer[self.index][num])", at: self.index)
         }
+    }
+    
+    func emptyTestArray(){
+        self.testArray = ["",""]
     }
 }
 

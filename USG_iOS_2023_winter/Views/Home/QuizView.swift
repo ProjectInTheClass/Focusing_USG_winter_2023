@@ -69,28 +69,34 @@ struct QuizView: View {
                         }
                     //다음 버튼 & 채점 버튼
                     if viewModel.index + 1 == viewModel.model.quizAnswer.answer.count{
-                        NavigationLink {
-                            AnswerCheckView(viewModel: viewModel)
-                            //viewModel.testArray = ["",""]
-                        } label: {
-                            ZStack{
-                                if viewModel.disabledButton {
-                                    RoundedRectangle(cornerRadius: 15)
-                                        .frame(width: geometry.size.width * 0.8, height:geometry.size.height * 0.13)
-                                        .foregroundColor(.gray)
+                        ZStack{
+                            NavigationLink(
+                                destination: AnswerCheckView(viewModel: viewModel),
+                                isActive: $viewModel.isLinkActive
+                            ) {
+                                
+                            }.disabled(viewModel.disabledButton)
+                            Button(action: {
+                                viewModel.emptyTestArray()
+                                viewModel.isLinkActive = true
+                            }) {
+                                ZStack{
+                                    if viewModel.disabledButton {
+                                        RoundedRectangle(cornerRadius: 15)
+                                            .frame(width: geometry.size.width * 0.8, height: geometry.size.height * 0.13)
+                                            .foregroundColor(.gray)
+                                    }
+                                    else {
+                                        RoundedRectangle(cornerRadius: 15)
+                                            .frame(width: geometry.size.width * 0.8, height: geometry.size.height * 0.13)
+                                            .foregroundColor(.green)
+                                    }
+                                    Text("문제풀러 가기")
+                                        .foregroundColor(.white)
                                 }
-                                else{
-                                    RoundedRectangle(cornerRadius: 15)
-                                        .frame(width: geometry.size.width * 0.8, height:geometry.size.height * 0.13)
-                                        .foregroundColor(.green)
-                                }
-                                Text("문제풀러 가기")
-                                    .foregroundColor(.white)
                             }
-                        }.disabled(viewModel.disabledButton)
-                            .onTapGesture {
-                                viewModel.testArray = ["",""]
-                            }
+                        }
+                        
                     }else{
                         Button {
                             viewModel.nextIndex()

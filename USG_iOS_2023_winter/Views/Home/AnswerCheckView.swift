@@ -35,7 +35,6 @@ struct AnswerCheckView: View {
                                             viewModel.index = num
                                             viewModel.selectedAnswer = ""
                                             viewModel.presentAnswerView()
-                                            
                                         } label: {
                                             RoundedRectangle(cornerRadius: 15)
                                                 .fill(.green)
